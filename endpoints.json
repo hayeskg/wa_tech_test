@@ -1,0 +1,20 @@
+{
+  "GET /api": {
+    "description": "See the available Offset Earth API endpoints"
+  },
+  "POST /api": {
+    "description": "Takes a word and a body of text. The API responds with the number of occurances of the word in the next and all indeces.",
+    "request": {
+      "word": "wordtofind",
+      "text": "find wordtofind in text"
+    },
+    "exampleResponse": {
+      "result": {
+        "wordCount": 1,
+        "wordIndeces": [
+          5
+        ]
+      }
+    }
+  }
+}
