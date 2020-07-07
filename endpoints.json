@@ -11,8 +11,8 @@
     "exampleResponse": {
       "result": {
         "wordCount": 1,
-        "wordIndeces": [
-          5
+        "wordPositions": [
+          1
         ]
       }
     }
