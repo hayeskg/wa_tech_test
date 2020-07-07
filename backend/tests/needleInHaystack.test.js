@@ -1,4 +1,4 @@
-const { needleInHaystack } = require('./utils');
+const { needleInHaystack } = require('../utils/utils');
 
 describe('needleInHaystack', () => {
   it('takes a word and a body of text, returns an object of occurance count and array indeces', () => {

@@ -1,10 +1,10 @@
 const apiRouter = require('express').Router();
-const endpointsJSON = require('../endpoints.json');
 const { findWordInText } = require('./controller');
+const { send405Error } = require('./errors')
 
 apiRouter
   .route('/')
-  .get((req, res) => { res.status(200).send(endpointsJSON) })
   .post(findWordInText)
+  .all(send405Error)
 
 module.exports = apiRouter;
