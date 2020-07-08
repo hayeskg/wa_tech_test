@@ -1,8 +1,7 @@
 const { needleInHaystack } = require('./utils/utils')
 
 exports.findWordInText = (req, res, next) => {
-
-  const { word, text } = req.body;
-  console.log(req.body)
-  res.status(200).send({ word, text });
+  const { word, text } = req.body.formInfo;
+  let response = needleInHaystack(word, text);
+  res.status(200).send({ result: response });
 }

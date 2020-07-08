@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors')
 const apiRouter = require('./router.js');
 const endpointsJSON = require('../endpoints.json');
 const {
@@ -7,6 +8,8 @@ const {
   send405Error,
   send404Error
 } = require('./errors')
+
+app.use(cors())
 
 app.use(express.json());
 
