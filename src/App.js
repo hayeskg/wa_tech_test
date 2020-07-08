@@ -14,16 +14,15 @@ function App() {
   })
   const { word, text } = formInfo;
 
-  let resultFlag = false;
   const [results, setResults] = useState({})
 
+  console.log(formInfo)
   const getResults = () => {
     axios.post('http://127.0.0.1:9090/api', {
       formInfo
     })
       .then(({ data }) => {
         setResults(data.result);
-        resultFlag = true;
       })
       .catch((error) => {
         console.log(error);
@@ -48,8 +47,6 @@ function App() {
     e.preventDefault();
     getResults();
   }
-
-  console.log(results);
 
   return (
     <div className="App">

@@ -3,14 +3,12 @@ import { TypoGraphy, Typography } from '@material-ui/core'
 
 const Results = ({ results }) => {
   const { wordCount, wordPositions } = results;
-  console.log(wordCount, '<---- word count')
   let renderFlag = false;
   if (wordCount > 0) {
     renderFlag = true;
   } else {
     renderFlag = false;
   }
-  console.log(renderFlag)
   return (
     <div>
       <p>Results:</p>
